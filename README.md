@@ -12,4 +12,6 @@ per l'anno accademico 2020/2021
 - [Laboratorio 05](./Lab05): Riepilogo su condizionali e cicli
 - [Laboratorio 06](./Lab06): Funzioni
 - [Laboratorio 07](./Lab07): Liste ed operazioni sulle liste
+- [Laboratorio 08](./Lab08): Liste. Tabelle (liste di liste). 
+- [Laboratorio 09](./Lab09): Riepilogo delle operazioni su liste e tabelle.
 
