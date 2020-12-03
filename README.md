@@ -14,4 +14,7 @@ per l'anno accademico 2020/2021
 - [Laboratorio 07](./Lab07): Liste ed operazioni sulle liste
 - [Laboratorio 08](./Lab08): Liste. Tabelle (liste di liste). 
 - [Laboratorio 09](./Lab09): Riepilogo delle operazioni su liste e tabelle.
+- [Laboratorio 10](./Lab10): Lettura e scrittura di File.
+- [Laboratorio 11](./Lab11): Struttura dati complesse.
+
 
