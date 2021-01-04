@@ -29,7 +29,7 @@ _(Risposta: A: 2^22 / 2^1)_
 
 ### Domanda 3
 
-Quali delle seguenti informazioni su un gruppo di studenti può essere memorizzata in un insieme Python?
+Quali delle seguenti informazioni su un gruppo di studenti può essere memorizzata in un insieme (set) Python?
 
 A. Per ogni studente, il suo cognome
 

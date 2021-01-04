@@ -8,7 +8,7 @@ L'hotel dispone di un file di testo, denominato `presenze.txt`, che contiene, pe
 diverso cliente dell'hotel. Ciascuna riga contiene 4 campi separati da virgola. Il primo campo è il nome del cliente, il
 secondo il numero di cellulare, ed i restanti due campi sono il giorno d'ingresso ed il giorno di uscita del cliente
 dall'hotel. Per semplicità, i giorni di ingresso ed uscita sono rappresentati da numeri interi (tra 1 e 366). Si può
-assumere che il file sia privo di errori.
+assumere che il file sia privo di errori e che il nome del cliente sia univoco.
 
 Il programma deve permettere all'hotel di ricercare eventuali contatti di eventuali clienti diagnosticati "positivo" al
 Covid-19. A tale scopo, dato il nome di un cliente, deve visualizzare a video il nome ed il numero di telefono di
@@ -25,11 +25,11 @@ seguente.
 Sia dato il file `presenze.txt` seguente:
 
 ```
-Mario Rossi, 3471234567, 100, 110
-Paolo Verdi, 3353334444, 105, 112
-Maria Azzurri, 3398887777, 98, 104
-Anna Neri, 06989855, 95, 100
-Guido Guidi, 3331112221, 90, 93
+Mario Rossi,3471234567,100,110
+Paolo Verdi,3353334444,105,112
+Maria Azzurri,3398887777,98,104
+Anna Neri,06989855,95,100
+Guido Guidi,3331112221,90,93
 ```
 
 Supponendo che il file `positivi.txt` abbia il seguente contenuto:
