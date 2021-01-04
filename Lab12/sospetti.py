@@ -1,7 +1,7 @@
 # Soluzione proposta Lab 12
 
 FILE_PRESENZE = 'presenze.txt'
-FILE_POSITIVI = 'positivi.txt'
+FILE_SOSPETTI = 'sospetti.txt'
 
 
 def leggi_presenze():
@@ -20,13 +20,13 @@ def leggi_presenze():
     return presenze
 
 
-def leggi_positivi():
-    positivi = []
-    file = open(FILE_POSITIVI, 'r')
+def leggi_sospetti():
+    sospetti = []
+    file = open(FILE_SOSPETTI, 'r')
     for line in file:
-        positivi.append(line.strip())
+        sospetti.append(line.strip())
     file.close()
-    return positivi
+    return sospetti
 
 
 def cerca_contatti(presenze, tizio):
@@ -48,20 +48,20 @@ def cerca_contatti(presenze, tizio):
 
 def main():
     presenze = leggi_presenze()
-    positivi = leggi_positivi()
+    sospetti = leggi_sospetti()
 
-    for positivo in positivi:
-        print(f'** Contatti del cliente: {positivo}: **')
+    for sospetto in sospetti:
+        print(f'** Contatti del cliente: {sospetto}: **')
 
-        contatti = cerca_contatti(presenze, positivo)
+        contatti = cerca_contatti(presenze, sospetto)
         if contatti is not None:
             if len(contatti)==0:
-                print(f'\tFortunatamente {positivo} non ha avuto contatti')
+                print(f'\tIl cliente {sospetto} non ha avuto contatti')
             else:
                 for contatto in sorted(contatti):
                     print(f'\tContatto con {contatto[0]}, telefono {contatto[1]}')
         else:
-            print(f'\tCliente {positivo} non presente in archivio')
+            print(f'\tCliente {sospetto} non presente in archivio')
 
 
 main()
