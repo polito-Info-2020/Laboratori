@@ -29,21 +29,39 @@ def leggi_sospetti():
     return sospetti
 
 
-def cerca_contatti(presenze, tizio):
+def cerca_contatti(presenze, sospetto):
     # cerco il tizio nella lista
-    if tizio in presenze:
-        dati_tizio = presenze[tizio]
+    if sospetto in presenze:
+        dati_sospetto = presenze[sospetto]
 
         contatti = []
         # controlla le presenze di tutti gli altri clienti
         for (cliente, dati_cliente) in presenze.items():
-            if cliente != tizio:
-                if (dati_tizio['in'] <= dati_cliente['in'] <= dati_tizio['out'] or
-                        dati_tizio['in'] <= dati_cliente['out'] <= dati_tizio['out']):
+            if cliente != sospetto:
+                if (dati_sospetto['in'] <= dati_cliente['in'] <= dati_sospetto['out'] or
+                        dati_sospetto['in'] <= dati_cliente['out'] <= dati_sospetto['out'] or
+                        (dati_cliente['in'] < dati_sospetto['in'] and dati_cliente['out'] > dati_sospetto['out'])):
                     contatti.append((cliente, dati_cliente['tel']))
         return contatti
     else:
         return None
+
+
+# Soluzione alternativa con l'utilizzo di 'set' che rappresentano i giorni di presenza
+def cerca_contatti_bis(presenze, sospetto):
+    if sospetto not in presenze:
+        return None
+
+    giorni_sospetto = set(range(presenze[sospetto]['in'], presenze[sospetto]['out']+1))
+
+    contatti = []
+    for cliente in presenze:
+        if cliente != sospetto:
+            giorni_cliente = set(range(presenze[cliente]['in'], presenze[cliente]['out']+1))
+            giorni_comuni = giorni_sospetto.intersection(giorni_cliente)
+            if len(giorni_comuni)>0:
+                contatti.append((cliente, presenze[cliente]['tel']))
+    return contatti
 
 
 def main():
@@ -55,7 +73,7 @@ def main():
 
         contatti = cerca_contatti(presenze, sospetto)
         if contatti is not None:
-            if len(contatti)==0:
+            if len(contatti) == 0:
                 print(f'\tIl cliente {sospetto} non ha avuto contatti')
             else:
                 for contatto in sorted(contatti):
@@ -64,4 +82,8 @@ def main():
             print(f'\tCliente {sospetto} non presente in archivio')
 
 
+import time
+start = time.perf_counter()
 main()
+stop = time.perf_counter()
+print(f'Execution time: {(stop-start)*1000:.2}ms')

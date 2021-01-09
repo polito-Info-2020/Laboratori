@@ -28,9 +28,11 @@ Sia dato il file `presenze.txt` seguente:
 ```
 Mario Rossi,3471234567,100,110
 Paolo Verdi,3353334444,105,112
-Maria Azzurri,3398887777,98,104
+Chiara Maria Azzurri,3398887777,98,104
 Anna Neri,06989855,95,100
 Guido Guidi,3331112221,90,93
+Zito Ziti,1231231231,107,108
+Pdor di Kmer,7766655544,100,120
 ```
 
 Supponendo che il file `sospetti.txt` abbia il seguente contenuto:
@@ -39,16 +41,22 @@ Supponendo che il file `sospetti.txt` abbia il seguente contenuto:
 Anna Neri
 Paolo Verdi
 Guido Guidi
+Uno Nessuno
 ```
 
 Il programma dovrà generare in output:
 
 ```
 ** Contatti del cliente: Anna Neri: **
-	Contatto con Maria Azzurri, telefono  3398887777
-	Contatto con Mario Rossi, telefono  3471234567
+	Contatto con Chiara Maria Azzurri, telefono 3398887777
+	Contatto con Mario Rossi, telefono 3471234567
+	Contatto con Pdor di Kmer, telefono 7766655544
 ** Contatti del cliente: Paolo Verdi: **
-	Contatto con Mario Rossi, telefono  3471234567
+	Contatto con Mario Rossi, telefono 3471234567
+	Contatto con Pdor di Kmer, telefono 7766655544
+	Contatto con Zito Ziti, telefono 1231231231
 ** Contatti del cliente: Guido Guidi: **
 	Il cliente Guido Guidi non ha avuto contatti
+** Contatti del cliente: Uno Nessuno: **
+	Cliente Uno Nessuno non presente in archivio
 ```
