@@ -2,20 +2,20 @@
 
 ## Parte di programmazione
 
-Si realizzi un programma Python per determinare le mosse vincenti nel gioco denomimato _Fantablitz_. Il gioco è composto
+Si realizzi un programma Python per determinare le mosse vincenti nel gioco denominato _Fantablitz_. Il gioco è composto
 da 5 pezzi fisici e da un mazzo di 60 carte. I pezzi fisici sono illustrati in figura, e rappresentano un fantasma (F)
 bianco (b), un topo (T) grigio (g), una bottiglia (B) verde (v), un libro (L) azzurro (a) ed una poltrona (P) rossa (r).
 Per brevità, utilizzeremo le iniziali dei nomi degli oggetti e dei colori.
 
 ![Pezzi del gioco](pezzi_gioco_small.jpg)
 
-Ciascuna delle 30 carte rappresenta sempre 2 oggetti (in posizioni e dimensioni diverse) che rappresentano due dei 5
+Ciascuna delle 60 carte rappresenta sempre 2 oggetti (in posizioni e dimensioni diverse) che rappresentano due dei 5
 pezzi, e sono colorati con due dei 5 colori (non necessariamente quelli dei pezzi fisici).
 
 ![Esempi di carte del gioco](carte_gioco_small.jpg)
 
 Il gioco consiste, data una carta del mazzo, nell'identificare il più rapidamente possibile quale sia il pezzo fisico
-corrispondente (è garantito che sia uno e solo uno), applicando le regole seguenti:
+corrispondente (è garantito che sia uno e solo uno, per ogni carta), applicando le regole seguenti:
 
 - se nella carta è rappresentato uno dei pezzi fisici, **nel colore corretto**, allora il pezzo da identificare è
   quello. Ad esempio, nella carta di sinistra compare la bottiglia verde; poiché il colore della bottiglia è giusto,
