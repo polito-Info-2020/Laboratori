@@ -16,5 +16,7 @@ per l'anno accademico 2020/2021
 - [Laboratorio 09](./Lab09): Riepilogo delle operazioni su liste e tabelle.
 - [Laboratorio 10](./Lab10): Lettura e scrittura di File.
 - [Laboratorio 11](./Lab11): Insiemi. Dizionari. Strutture dati complesse.
-- [Laboratorio 12](./Lab12): Simulazione d'esame.
+- [Laboratorio 12](./Lab12): Simulazione d'esame 1.
+- [Laboratorio 13](./Lab13): Simulazione d'esame 2.
+
 
