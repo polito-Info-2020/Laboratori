@@ -1,0 +1,44 @@
+DOMANDA 1
+=========
+
+101000 (-32+8 = -24)
+
+111001 (-32+16+8+1 = -7)
+
+111111  (-32+16+8+4+2+1 = -1)
+
+000000 
+
+011000 (16+8 = 24)
+
+011111 (16+8+4+2+1 = 31)
+
+DOMANDA 2
+=========
+Risposta: 2
+
+
+
+1 - No -> i registri non hanno un indirizzo (non ne hanno bisogno), dentro la CPU non c'è l'address bus (queste serve per inidirizzare risorse ESTERNE alla CPU)
+
+
+2 - Sì, corrispone al numero di celle max che potrò mai indirizzare
+
+
+
+3 - Dischi HD, SSD, chiavette USB -> sono periferchie di output, non direttamente collegati alla CPU -> il loro contenuto non è indirizzato dall'ABUS
+
+
+
+4 - non c'entra niente, la risoluzione video dipende dalla memoria della scheda video e dalla potenza della GPU
+
+
+DOMANDA 3
+=========
+
+I tipi di dato immutabili sono quelli per cui, una volta assegnato un valore
+iniziale, non è più possibile modificare il contenuto del valore della variabile.
+
+Esempi in Python sono: stringhe e tuple.
+
+(anche: numeri int/float)
